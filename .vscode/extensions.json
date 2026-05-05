@@ -1,0 +1,27 @@
+{
+  "recommendations": [
+    // ── Core ───────────────────────────────────────────────────────────────
+    "esbenp.prettier-vscode", // Prettier — format on save
+    "dbaeumer.vscode-eslint", // ESLint — inline error highlighting
+
+    // ── React Native / Expo ────────────────────────────────────────────────
+    "msjsdiag.vscode-react-native", // RN debugger + IntelliSense
+    "expo.vscode-expo-tools", // Expo-specific helpers
+
+    // ── Tailwind / NativeWind ──────────────────────────────────────────────
+    "bradlc.vscode-tailwindcss", // Autocomplete + hover for className
+
+    // ── TypeScript ─────────────────────────────────────────────────────────
+    "ms-vscode.vscode-typescript-next", // Latest TS language server
+
+    // ── Git ────────────────────────────────────────────────────────────────
+    "eamodio.gitlens", // Inline git blame + history
+    "vivaxy.vscode-conventional-commits" // Conventional commit picker
+  ],
+
+  "unwantedRecommendations": [
+    // Conflicts with Prettier
+    "hookyqr.beautify",
+    "esbenp.prettier-vscode-legacy"
+  ]
+}

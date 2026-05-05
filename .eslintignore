@@ -1,0 +1,7 @@
+node_modules
+.expo
+dist
+web-build
+android
+ios
+# Config files are linted with relaxed rules via overrides, not ignored entirely

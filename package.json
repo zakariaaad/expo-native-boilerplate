@@ -1,0 +1,92 @@
+{
+  "name": "expo-boilerplate",
+  "main": "expo-router/entry",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,css}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md,css}\"",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky",
+    "build:dev": "eas build --profile development --platform all",
+    "build:dev:ios": "eas build --profile development --platform ios",
+    "build:dev:android": "eas build --profile development --platform android",
+    "build:preview": "eas build --profile preview --platform all",
+    "build:preview:ios": "eas build --profile preview --platform ios",
+    "build:preview:android": "eas build --profile preview --platform android",
+    "build:prod": "eas build --profile production --platform all",
+    "build:prod:ios": "eas build --profile production --platform ios",
+    "build:prod:android": "eas build --profile production --platform android",
+    "submit:ios": "eas submit --profile production --platform ios",
+    "submit:android": "eas submit --profile production --platform android",
+    "update": "eas update --channel production --message",
+    "update:preview": "eas update --channel preview --message"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^7.1.8",
+    "@tanstack/react-query": "^5.17.0",
+    "axios": "^1.6.5",
+    "expo": "~54.0.33",
+    "expo-constants": "~18.0.13",
+    "expo-font": "~14.0.11",
+    "expo-linking": "~8.0.11",
+    "expo-router": "~6.0.23",
+    "expo-secure-store": "~12.8.1",
+    "expo-splash-screen": "~31.0.13",
+    "expo-status-bar": "~3.0.9",
+    "expo-web-browser": "~15.0.10",
+    "metro": "^0.83.1",
+    "metro-cache": "^0.84.4",
+    "metro-config": "^0.84.4",
+    "nativewind": "^4.0.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "tailwind-merge": "^2.2.0",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~19.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "babel-plugin-module-resolver": "^5.0.3",
+    "clsx": "^2.1.1",
+    "eas-cli": "^7.8.0",
+    "eslint": "^8.56.0",
+    "eslint-config-expo": "^7.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "react-native-gesture-handler": "^2.31.2",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint "
+    ],
+    "*.{js,mjs,cjs}": [
+      "prettier --write"
+    ],
+    "*.{json,md,mdx,css}": [
+      "prettier --write"
+    ]
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+# Dependencies
+node_modules
+
+# Expo generated
+.expo
+dist
+web-build
+
+# Native build output
+android
+ios
+
+# Lock files — never format these
+*.lock
+package-lock.json
+yarn.lock
+
+# Auto-generated
+*.generated.*

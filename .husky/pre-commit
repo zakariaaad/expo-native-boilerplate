@@ -1,0 +1,11 @@
+echo "🔍 Running pre-commit checks..."
+
+# ── Step 1: Prettier + ESLint on staged files only ───────────────────────────
+npx lint-staged
+
+# ── Step 2: Full type-check ──────────────────────────────────────────────────
+# lint-staged processes files in isolation — tsc catches cross-file type errors.
+echo "🧩 Type checking..."
+npx tsc --noEmit
+
+echo "✅ All checks passed!"
