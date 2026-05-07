@@ -17,14 +17,7 @@ module.exports = {
   },
 
   // ─── Plugins ───────────────────────────────────────────────────────────────
-  plugins: [
-    '@typescript-eslint',
-    'react',
-    'react-hooks',
-    'react-native',
-    'import',
-    'prettier',
-  ],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'react-native', 'import', 'prettier'],
 
   // ─── Extends ───────────────────────────────────────────────────────────────
   // Order matters:
@@ -45,6 +38,14 @@ module.exports = {
 
   settings: {
     react: { version: 'detect' },
+    'import/resolver': {
+      typescript: {
+        project: './tsconfig.json',
+      },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 
   // ─── Rules ─────────────────────────────────────────────────────────────────
@@ -53,8 +54,8 @@ module.exports = {
     'prettier/prettier': 'error',
 
     // ── React ──────────────────────────────────────────────────────────────
-    'react/react-in-jsx-scope': 'off',  // New JSX transform handles this
-    'react/prop-types': 'off',          // TypeScript covers prop types
+    'react/react-in-jsx-scope': 'off', // New JSX transform handles this
+    'react/prop-types': 'off', // TypeScript covers prop types
     'react/display-name': 'off',
     'react/self-closing-comp': 'warn',
 
@@ -65,10 +66,10 @@ module.exports = {
     // ── React Native ───────────────────────────────────────────────────────
     'react-native/no-unused-styles': 'error',
     'react-native/split-platform-components': 'warn',
-    'react-native/no-inline-styles': 'off',    // NativeWind className props
-    'react-native/no-color-literals': 'off',   // Colors live in Tailwind tokens
-    'react-native/no-raw-text': 'off',         // Too noisy with NativeWind
-    'react-native/sort-styles': 'off',         // prettier-plugin-tailwindcss handles this
+    'react-native/no-inline-styles': 'off', // NativeWind className props
+    'react-native/no-color-literals': 'off', // Colors live in Tailwind tokens
+    'react-native/no-raw-text': 'off', // Too noisy with NativeWind
+    'react-native/sort-styles': 'off', // prettier-plugin-tailwindcss handles this
 
     // ── TypeScript ─────────────────────────────────────────────────────────
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
